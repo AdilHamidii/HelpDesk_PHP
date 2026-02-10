@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - HelpDesk</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">HelpDesk</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="login.html" class="nav-link">Connexion</a></li>
+                    <li><a href="profile.html" class="nav-link">Profil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-card auth-card-large">
+            <h1>Inscription</h1>
+            
+            <div id="message-container"></div>
+            
+            <form id="register-form" action="../php/register.php" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first_name">Prénom:</label>
+                        <input 
+                            type="text" 
+                            id="first_name" 
+                            name="first_name" 
+                            placeholder="Votre prénom"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_name">Nom:</label>
+                        <input 
+                            type="text" 
+                            id="last_name" 
+                            name="last_name" 
+                            placeholder="Votre nom"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur:</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Choisissez un nom d'utilisateur"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Votre adresse email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe:</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Minimum 6 caractères"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm_password">Confirmer le mot de passe:</label>
+                    <input 
+                        type="password" 
+                        id="confirm_password" 
+                        name="confirm_password" 
+                        placeholder="Confirmez votre mot de passe"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Je suis:</label>
+                    <select id="role" name="role" required>
+                        <option value="student">Étudiant</option>
+                        <option value="tutor">Tuteur</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">S'inscrire</button>
+            </form>
+
+            <p class="auth-link">
+                Vous avez déjà un compte? <a href="login.html">Se connecter</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HelpDesk. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

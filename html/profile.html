@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - HelpDesk</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">HelpDesk</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="login.html" class="nav-link">Connexion</a></li>
+                    <li><a href="profile.html" class="nav-link active">Profil</a></li>
+                    <li><a href="../php/logout_handler.php" class="nav-link logout">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="message-container"></div>
+
+        <div class="profile-container">
+            <div class="profile-sidebar">
+                <div class="profile-card">
+                    <div class="profile-avatar" id="profile-avatar">
+                        <span>P</span>
+                    </div>
+                    <h2 id="profile-name">Utilisateur</h2>
+                    <p id="profile-role" class="profile-role">Étudiant</p>
+                    <p id="profile-email" class="profile-email">email@example.com</p>
+                </div>
+
+                <div class="menu-card">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#" onclick="showSection('dashboard')">Tableau de bord</a></li>
+                        <li><a href="#" onclick="showSection('settings')">Paramètres</a></li>
+                        <li><a href="#" onclick="showSection('sessions')">Mes sessions</a></li>
+                        <li><a href="../php/logout_handler.php">Déconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="profile-main">
+                <section id="dashboard" class="profile-section active">
+                    <h2>Bienvenue sur votre tableau de bord</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Sessions Complétées</h3>
+                            <p class="stat-number">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Sessions en attente</h3>
+                            <p class="stat-number">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Tuteurs disponibles</h3>
+                            <p class="stat-number">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Sujets maîtrisés</h3>
+                            <p class="stat-number">0</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sessions" class="profile-section">
+                    <h2>Mes Sessions</h2>
+                    <div class="sessions-list">
+                        <p class="empty-message">Aucune session trouvée.</p>
+                    </div>
+                </section>
+
+                <section id="settings" class="profile-section">
+                    <h2>Paramètres du profil</h2>
+                    <form id="settings-form" class="settings-form">
+                        <div class="form-group">
+                            <label for="settings-first_name">Prénom:</label>
+                            <input type="text" id="settings-first_name" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="settings-last_name">Nom:</label>
+                            <input type="text" id="settings-last_name" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="settings-email">Email:</label>
+                            <input type="email" id="settings-email" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="settings-username">Nom d'utilisateur:</label>
+                            <input type="text" id="settings-username" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bio">Biographie:</label>
+                            <textarea id="bio" placeholder="Présentez-vous..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Mettre à jour</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HelpDesk. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/profile.js"></script>
+</body>
+</html>
