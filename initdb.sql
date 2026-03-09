@@ -10,9 +10,10 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS tickets ( 
     id INT AUTO8INCREMENT PRIMARY KEY, 
-    title VARCHAR(255) NOT NULL,
+    titre VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
     status ENUM('open', 'in_progress', 'closed') NOT NULL DEFAULT 'open',
+    categorie ENUM('CM', 'TD', 'TP') NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     closed_at TIMESTAMP NULL,
     student_id INT NOT NULL,

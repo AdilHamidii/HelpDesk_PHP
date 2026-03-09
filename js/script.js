@@ -1,4 +1,3 @@
-// Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeScrollEffects();
@@ -43,7 +42,7 @@ function initializeScrollEffects() {
     });
 }
 
-console.log('Plateforme Tutorat - Application chargée avec succès');
+
 
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('btn-primary')) {
